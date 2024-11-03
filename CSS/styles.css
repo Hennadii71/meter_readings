@@ -1,5 +1,14 @@
 /* #region reset settings */
 /* Reset settings */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -64,23 +73,26 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  justify-content: center;
 }
 
 .menu__list-item {
-  width: calc((100% - 96px) / 3);
-  padding: 16px 4px;
+  width: calc((100% - 48px) / 3);
+  align-content: center;
   text-align: center;
-  border: solid 2px brown;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.65);
   border-radius: 5px;
-  background-color: burlywood;
+  background-color: white;
 }
 
 .menu__link {
+  display: block;
   color: #292929;
   font-weight: 500;
+  padding: 16px 4px;
 }
 
-/* #region general styles page */
+/* #region general styles pages */
 .menu-page {
   margin-bottom: 48px;
 }

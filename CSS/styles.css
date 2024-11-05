@@ -52,6 +52,12 @@ body {
   padding-right: 16px;
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
 .section {
   padding-top: 48px;
   padding-bottom: 48px;
@@ -70,9 +76,7 @@ body {
 }
 
 .menu__list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  margin-bottom: 24px;
 }
 
 .menu__list-item {
@@ -83,12 +87,28 @@ body {
   border-radius: 5px;
   background-color: white;
 }
+@media screen and (max-width: 767px) {
+  .menu__list-item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
 
 .menu__link {
   display: block;
   color: #292929;
   font-weight: 500;
   padding: 16px 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__list-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
 }
 
 /* #region general styles pages */

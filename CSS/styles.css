@@ -91,6 +91,9 @@ body {
   .menu__list-item:not(:last-child) {
     margin-bottom: 24px;
   }
+  .card-object__text-date {
+    line-height: 1.5;
+  }
 }
 
 .menu__link {
@@ -128,14 +131,34 @@ body {
 .card-object__item {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #292929;
 }
 
 .card-object__item:not(:last-child) {
   margin-bottom: 40px;
 }
 
+.card-object__option-title {
+  margin-bottom: 8px;
+}
+
+.card-object__date {
+  margin-left: 8px;
+  padding: 4px;
+  border: 1px solid #292929;
+  border-radius: 5px;
+}
+
+/* @media screen and (max-width: 767px) {
+  .card-object__date {
+    margin-top: 4px;
+  }
+} */
+
 .card-object__link {
   display: block;
+  align-content: center;
   width: 100px;
   text-align: center;
   padding: 4px 8px;

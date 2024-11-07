@@ -1,4 +1,5 @@
-const date = document.querySelector(".js-date");
+const date = document.querySelectorAll(".js-date");
+console.log(typeof date);
 
 const currentTime = new Date();
 
@@ -23,12 +24,22 @@ const current = {
   year: currentTime.getFullYear(),
 };
 
-function printConsole() {
-  console.log(current.date);
+let currentDate = [];
+
+[].map.call(date, (el) => {
+  currentDate.push(el);
+});
+
+for (let index of currentDate) {
+  index.textContent = localStorage.getItem("date");
 }
 
-function getCurrentDate() {
-  date.textContent = `${current.date}.${current.month}.${current.year}`;
-}
-
-const changeDate = date.addEventListener("click", getCurrentDate);
+// [].forEach.call(date, (el) => {
+//   el.addEventListener("click", () => {
+//     localStorage.setItem(
+//       "date",
+//       `${current.date}.${current.month}.${current.year}`
+//     );
+//     el.textContent = localStorage.getItem("date");
+//   });
+// });

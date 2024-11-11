@@ -1,5 +1,7 @@
-const date = document.querySelectorAll(".js-date");
-console.log(typeof date);
+const refs = {
+  date: document.querySelector(".js-date"),
+  dateItem: document.querySelectorAll(".js-date__item"),
+};
 
 const currentTime = new Date();
 
@@ -24,22 +26,33 @@ const current = {
   year: currentTime.getFullYear(),
 };
 
-let currentDate = [];
+const dateSavingMeters = {};
 
-[].map.call(date, (el) => {
-  currentDate.push(el);
-});
+initDateSavingMeters();
 
-for (let index of currentDate) {
-  index.textContent = localStorage.getItem("date");
+refs.date.addEventListener("click", createNewDate);
+
+function createNewDate(event) {
+  if (event.target.nodeName !== "SPAN") {
+    return;
+  }
+  event.target.textContent = `${current.date}.${current.month}.${current.year}`;
+  dateSavingMeters[event.target.getAttribute("data-notation")] =
+    event.target.textContent;
+
+  localStorage.setItem("date", JSON.stringify(dateSavingMeters));
 }
 
-// [].forEach.call(date, (el) => {
-//   el.addEventListener("click", () => {
-//     localStorage.setItem(
-//       "date",
-//       `${current.date}.${current.month}.${current.year}`
-//     );
-//     el.textContent = localStorage.getItem("date");
-//   });
-// });
+function initDateSavingMeters() {
+  let persistedDate = localStorage.getItem("date");
+  if (persistedDate) {
+    persistedDate = JSON.parse(persistedDate);
+  }
+  Object.entries(persistedDate).forEach(([name, value]) => {
+    dateSavingMeters[name] = value;
+    [].forEach.call(refs.dateItem, (element) => {
+      if (element.getAttribute("data-notation") === name)
+        element.textContent = value;
+    });
+  });
+}

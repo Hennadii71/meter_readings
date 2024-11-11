@@ -44,15 +44,16 @@ function createNewDate(event) {
 }
 
 function initDateSavingMeters() {
-  // let persistedDate = localStorage.getItem("date");
-  // if (!persistedDate) {
-  //   persistedDate = JSON.parse(persistedDate);
-  // }
-  // Object.entries(persistedDate).forEach(([name, value]) => {
-  //   dateSavingMeters[name] = value;
-  //   [].forEach.call(refs.dateItem, (element) => {
-  //     if (element.getAttribute("data-notation") === name)
-  //       element.textContent = value;
-  //   });
-  // });
+  let persistedDate = localStorage.getItem("date");
+  if (!persistedDate) {
+    return;
+  }
+  persistedDate = JSON.parse(persistedDate);
+  Object.entries(persistedDate).forEach(([name, value]) => {
+    dateSavingMeters[name] = value;
+    [].forEach.call(refs.dateItem, (element) => {
+      if (element.getAttribute("data-notation") === name)
+        element.textContent = value;
+    });
+  });
 }

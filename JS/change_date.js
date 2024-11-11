@@ -45,9 +45,9 @@ function createNewDate(event) {
 
 function initDateSavingMeters() {
   let persistedDate = localStorage.getItem("date");
-
-  persistedDate = JSON.parse(persistedDate);
-
+  if (!persistedDate) {
+    persistedDate = JSON.parse(persistedDate);
+  }
   Object.entries(persistedDate).forEach(([name, value]) => {
     dateSavingMeters[name] = value;
     [].forEach.call(refs.dateItem, (element) => {

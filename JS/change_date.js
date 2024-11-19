@@ -31,6 +31,7 @@ const dateSavingMeters = {};
 initDateSavingMeters();
 
 refs.date.addEventListener("click", createNewDate);
+refs.date.addEventListener("click", addSound);
 
 function createNewDate(event) {
   if (event.target.nodeName !== "SPAN") {
@@ -41,6 +42,18 @@ function createNewDate(event) {
     event.target.textContent;
 
   localStorage.setItem("date", JSON.stringify(dateSavingMeters));
+}
+
+function addSound() {
+  if (event.target.nodeName !== "SPAN") {
+    return;
+  }
+  let sound = document.createElement("audio");
+  sound.setAttribute("autoplay", true);
+  sound.setAttribute("src", "../mixkit-paper-slide-1530.wav");
+
+  document.body.append(sound);
+  setTimeout(() => sound.remove(), 3000);
 }
 
 function initDateSavingMeters() {

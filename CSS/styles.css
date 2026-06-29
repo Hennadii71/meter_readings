@@ -152,3 +152,67 @@ body {
   background-color: white;
 }
 /* #endregion */
+
+
+/* #Deadlines */
+.deadline-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #e2e2e2;
+  color: #555;
+}
+
+.deadline-badge.green {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.deadline-badge.orange {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.deadline-badge.red {
+  background-color: #f8d7da;
+  color: #721c24;
+
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* # Main Menu Dots */
+.menu__list-item {
+  position: relative;
+}
+
+.menu__status-dot {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.menu__status-dot.grey {
+  background-color: #a0a0a0;
+}
+
+.menu__status-dot.orange {
+  background-color: #ff9800;
+}
+
+.menu__status-dot.red {
+  background-color: #e53935;
+  animation: pulse 1.5s infinite;
+}

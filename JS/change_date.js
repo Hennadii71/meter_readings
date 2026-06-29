@@ -30,8 +30,10 @@ const dateSavingMeters = {};
 
 initDateSavingMeters();
 
-refs.date.addEventListener("click", createNewDate);
-refs.date.addEventListener("click", addSound);
+if (refs.date) {
+  refs.date.addEventListener("click", createNewDate);
+  refs.date.addEventListener("click", addSound);
+}
 
 function createNewDate(event) {
   if (event.target.nodeName !== "SPAN") {
@@ -42,9 +44,11 @@ function createNewDate(event) {
     event.target.textContent;
 
   localStorage.setItem("date", JSON.stringify(dateSavingMeters));
+
+  if (typeof updateAllDeadlines === 'function') updateAllDeadlines();
 }
 
-function addSound() {
+function addSound(event) {
   if (event.target.nodeName !== "SPAN") {
     return;
   }

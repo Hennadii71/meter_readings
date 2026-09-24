@@ -17,46 +17,23 @@
 <body>
     <div class="container">
         <div class="section">
-            <h1 class="title">Список об'єктів</h1>
+            <h1 class="title">Показники лічильників</h1>
+            <a href="HTML/home-page.html">На головну</a>
 
-            <nav class="menu">
-                <p class="menu__text">Для вибору об'єкту натисни на адресу</p>
 
-                <ul class="menu__list">
-                    <li class="menu__list-item">
-                        <a class="menu__link" href="HTML/troitsko_kyrilivska.html">вул. Троїцько-Кирилівська 14-А</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a class="menu__link" href="HTML/irpinska.html">вул. Ірпінська 62-А</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a class="menu__link" href="HTML/copernicus.html">вул. Коперника 3</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a class="menu__link" href="HTML/svyatoshynska.html">вул. Святошинська 27-Д</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a class="menu__link" href="HTML/kostyantynivska.html">вул. Костянтинівська 10</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a class="menu__link" href="HTML/tumanyan.html">вул. Туманяна 1-А</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a class="menu__link" href="HTML/mykilsko_borshchagivska.html">вул. Микільсько-Борщагівська
-                            5</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a class="menu__link" href="HTML/leonovka.html">с. Леонівка, вул. Набережна 29-А</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a class="menu__link" href="HTML/miru.html">вул. Миру 16</a>
-                    </li>
-                    <li class="menu__list-item">
-                        <a class="menu__link" href="HTML/teremki.html">вул. Максимовича 32-Б</a>
-                    </li>
-                </ul>
+            <form class="form__login" action="/login" method="POST">
+                <h2 class="">Увійти</h2>
+                <p class="menu__text">Введіть ваші облікові дані для входу</p>
 
-            </nav>
+                <label for="login">Логін</label>
+                <input class="form__login-input" type="text" name="login" id="login" placeholder="Логін" required>
+
+                <label for="password">Пароль</label>
+                <input class="form__login-input" type="password" name="password" id="password" placeholder="Пароль"
+                    required>
+
+                <button class="form__login-button" type="submit">Увійти</button>
+            </form>
         </div>
     </div>
 </body>

@@ -64,6 +64,44 @@ body {
 }
 /* #endregion */
 
+/* #region login form styles */
+.form__login {
+  max-width: 400px;
+  padding: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid #292929;
+  border-radius: 5px;
+  background-color: #dae8f3;
+}
+
+.form__login-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #292929;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.65);
+}
+
+.form__login-button {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: #292929;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form__login-button:hover {
+  background-color: #e20909;
+}
+/* #endregion */
+
 .title {
   text-align: center;
   margin-bottom: 48px;

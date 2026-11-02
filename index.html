@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Показники лічильників</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
@@ -11,29 +12,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <div class="container">
+        <ul class="header">
+            <li><a href="/html/signup-form.html" class="header-link">зареєструватись</a></li>
+            <li><a href="/html/signin-form.html" class="heder-link">увійти</a></li>
+        </ul>
         <div class="section">
-            <h1 class="title">Показники лічильників</h1>
-            <a href="HTML/home-page.html">На головну</a>
 
-
-            <form class="form__login" action="/login" method="POST">
-                <h2 class="">Увійти</h2>
-                <p class="menu__text">Введіть ваші облікові дані для входу</p>
-
-                <label for="login">Логін</label>
-                <input class="form__login-input" type="text" name="login" id="login" placeholder="Логін" required>
-
-                <label for="password">Пароль</label>
-                <input class="form__login-input" type="password" name="password" id="password" placeholder="Пароль"
-                    required>
-
-                <button class="form__login-button" type="submit">Увійти</button>
-            </form>
         </div>
     </div>
 </body>

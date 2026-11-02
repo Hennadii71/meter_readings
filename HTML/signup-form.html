@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма для реєстрації</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="section">
+            <h1 class="title">Форма для реєстрації нових користувачів</h1>
+            <form class="form__login" id="signup-form" method="POST" autocomplete="off">
+
+                <p class="menu__text">Всі поля обов'язкові для заповнення</p>
+                <label for="signup-username">Username</label>
+                <input class="form__login-input " type="text" id="signup-username" placeholder="username"
+                    autocomplete="off" required>
+                <label for="signup-email">Email</label>
+                <input class="form__login-input" type="email" id="signup-email" placeholder="email" autocomplete="off"
+                    required>
+
+                <label for="signup-password">Пароль</label>
+                <input class="form__login-input" type="password" id="signup-password" placeholder="пароль"
+                    autocomplete="off" required>
+
+                <button class="form__login-button" type="submit">Зареєструватись</button>
+            </form>
+        </div>
+    </div>
+    <script src="../js/signup.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма для входу</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="section">
+            <h1 class="title">Форма для входу</h1>
+            <form class="form__login" id="signin-form" method="POST" autocomplete="off">
+
+                <p class="menu__text">Введіть ваш логін і пароль</p>
+
+                <label for="signin-email">Логін</label>
+                <input class="form__login-input" type="email" id="signin-email" placeholder="email" autocomplete="on"
+                    required>
+
+                <label for="signin-password">Пароль</label>
+                <input class="form__login-input js-password" type="password" id="signin-password" placeholder="пароль"
+                    autocomplete="off" required>
+
+                <button class="form__login-button" type="submit">Увійти</button>
+                <p class="menu-text" id="errorContainer"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/signin.js" type="module"></script>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-import { BASE_URL } from "./api.js";
+import { BASE_URL } from "../api/api.js";
 
 const signupForm = document.getElementById("signup-form");
 const signupUser = document.getElementById("signup-username");

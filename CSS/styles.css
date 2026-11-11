@@ -59,8 +59,11 @@ body {
 }
 
 .section {
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 24px;
+}
+
+button {
+  cursor: pointer;
 }
 /* #endregion */
 
@@ -118,30 +121,30 @@ body {
   font-weight: 700;
 }
 
-.menu__text {
+.object__text {
   text-align: center;
   margin-bottom: 24px;
 }
 
-.menu__list {
+.object__list {
   margin-bottom: 24px;
 }
 
-.menu__list-item {
+.object__list-item {
   max-width: 400px;
   align-content: center;
   text-align: center;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.65);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   background-color: white;
 }
 @media screen and (max-width: 767px) {
-  .menu__list-item:not(:last-child) {
+  .object__list-item:not(:last-child) {
     margin-bottom: 24px;
   }
 }
 
-.menu__link {
+.object__list-item {
   display: block;
   color: #292929;
   font-weight: 500;
@@ -149,10 +152,10 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .menu__list-item {
+  .object__list-item {
     width: calc((100% - 24px) / 2);
   }
-  .menu__list {
+  .object__list {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
@@ -160,11 +163,11 @@ body {
 }
 
 /* #region general styles pages */
-.menu-page {
+.object-page {
   margin-bottom: 48px;
 }
 
-.menu-page__link {
+.object-page__link {
   color: #292929;
   font-weight: 500;
 }

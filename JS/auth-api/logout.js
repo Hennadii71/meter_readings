@@ -1,4 +1,4 @@
-import { BASE_URL } from "./api.js";
+import { BASE_URL } from "../api/api.js";
 
 const logoutButton = document.querySelector(".logout-button");
 
@@ -14,7 +14,7 @@ const logout = async () => {
     localStorage.removeItem("jwt-token");
     window.location.replace("/index.html");
   } catch (error) {
-    error.message;
+    console.error(error.message);
   }
 };
 

@@ -23,7 +23,7 @@ const handleGetAllObjects = async () => {
           .map((obj) => {
             return `
             <li class="object__list-item" data-id="${obj._id}">
-              <button style="border: none;">${obj.objectName}</button>
+              <p>${obj.objectName}</p>
               <button class="js-btn-delete" style="margin-left: 10px;">Видалити</button>
             </li>
           `;
@@ -65,8 +65,8 @@ const handleDeleteObject = async (event) => {
   if (event.target.classList.contains("js-btn-delete")) {
     const objectItem = event.target.closest("li");
     const objectId = objectItem.dataset.id;
-
-    if (confirm(`Ви хочете видалити об'єкт`)) {
+    const objectName = objectItem.firstElementChild.textContent;
+    if (confirm(`Ви хочете видалити об'єкт ${objectName}?`)) {
       try {
         const response = await deleteObjectById(objectId);
         if (response && response.ok) {
